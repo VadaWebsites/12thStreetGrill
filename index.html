@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12th Street Grill</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <img src="images/logo.png" alt="12th Street Grill Logo" class="logo" />
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="order.html" class="order-btn">Order Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 style="color: rgb(255, 255, 255); font-size: 60px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome to 12th Street Grill</h1>
+    <p style="color: rgb(255, 255, 255);">Fresh breakfast, hot coffee, burgers, coneys, and classic grill favorites.</p>
+    <div class="hero-buttons">
+      <a href="menu.html" class="btn primary">View Menu</a>
+      <a href="#contact" class="btn secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-text">
+    <h2>Local Food. Fresh Flavor.</h2>
+    <p>
+      12th Street Grill is your neighborhood spot for breakfast, lunch, and comfort food favorites.
+      From omelets and pancakes to burgers, coneys, salads, and sandwiches, we serve food made fresh
+      with friendly service every day.
+    </p>
+  </div>
+
+  <div class="about-card">
+    <h3>Open Daily</h3>
+    <p style="color: #e2e2e2;">Breakfast • Lunch • Grill Favorites</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-card">
+    <h3>Breakfast</h3>
+    <p>Omelets, pancakes, eggs, hash browns, and more.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Lunch</h3>
+    <p>Burgers, sandwiches, salads, and homemade favorites.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Coney Classics</h3>
+    <p>Hot dogs, chili cheese fries, gyros, and grill specials.</p>
+  </div>
+</section>
+
+
+
+<section class="order-section" id="order">
+  <h2>Hungry?</h2>
+  <p>Call us or stop by today for fresh food made right.</p>
+  <a href="tel:5867512211" class="btn primary">Call Now</a>
+  <a href="order.html" style="margin-top: 10px;" class="btn primary">Order Online</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Visit Us</h2>
+    <p>We’d love to serve you.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div>
+      <h3>Address</h3>
+      <p><a href="https://www.google.com/maps/place/28809+Van+Dyke+Ave,+Warren,+MI+48093" target="_blank" rel="noopener noreferrer">28809 Van Dyke Ave<br>Warren, MI 48093</a></p>
+    </div>
+
+    <div>
+      <h3>Phone</h3>
+      <p><a href="tel:5867512211">(586) 751-2211</a></p>
+    </div>
+
+    <div>
+      <h3>Hours</h3>
+      <p>Monday - Saturday<br>6:00 AM - 3:00 PM</p>
+      <p>Sunday<br>7:00 AM - 2:00 PM</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Powered by <a target="_blank" style="font-weight: bolder; font-size: 16px;" href="https://www.getvada.com">Vada.</a></p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Order Online | 12th Street Grill</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Order Page */
+    .order-page {
+      width: 100%;
+      min-height: calc(100vh - 160px);
+      padding-top: 90px;
+      background-color: #f5f5f5;
+    }
+
+   
+
+    .order-frame-container {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .order-frame {
+      display: block;
+      width: 90%;
+      height: calc(100vh - 230px);
+      min-height: 700px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.14);
+      margin: 20 auto;
+      
+    }
+
+    .external-order {
+      padding: 0px;
+      text-align: center;
+    }
+
+    .external-order p {
+      margin-bottom: 15px;
+    }
+
+    .external-order-btn {
+      display: inline-block;
+      padding: 13px 25px;
+      color: #ffffff;
+      background-color: #b32025;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .external-order-btn:hover {
+      background-color: #8e181c;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .order-page {
+        padding-top: 75px;
+      }
+
+      .order-header {
+        padding: 25px 15px 15px;
+      }
+
+      .order-frame-container {
+        padding: 0 10px 25px;
+      }
+
+      .order-frame {
+        height: calc(100vh - 190px);
+        min-height: 650px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+
+      <a href="index.html" aria-label="12th Street Grill home page">
+        <img
+          src="images/logo.png"
+          alt="12th Street Grill Logo"
+          class="logo"
+        />
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="order.html" class="order-btn active">
+            Order Now
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <main class="order-page">
+
+   
+
+
+    <section class="order-frame-container">
+
+      <iframe
+        class="order-frame"
+        src="https://order.vada.app/12th-street-grill"
+        title="12th Street Grill Online Ordering"
+        loading="eager"
+        allow="payment"
+        referrerpolicy="strict-origin-when-cross-origin"
+      >
+        Your browser does not support embedded pages.
+      </iframe>
+
+      <div class="external-order">
+        <p>
+          Having trouble viewing the ordering system?
+        </p>
+
+        <a
+          href="https://order.vada.app/12th-street-grill"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="external-order-btn"
+        >
+          Open Online Ordering
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <p>
+      © 2026 Powered by
+      <a
+        href="https://www.getvada.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="font-weight: bolder; font-size: 16px;"
+      >
+        Vada.
+      </a>
+    </p>
+  </footer>
+
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("show");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("#navLinks a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  </script>
+
+</body>
+</html>
+```
